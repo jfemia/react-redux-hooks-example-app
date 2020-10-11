@@ -1,10 +1,10 @@
 import React, { useRef, useCallback } from 'react';
-import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo, updateTodo, deleteTodo } from './store/todo';
+import './App.css';
 
 function App() {
-  const todos = useSelector(state => state.todos);
+  const todos = useSelector(state => state.todo);
 
   const dispatch = useDispatch();
   const inputRef = useRef();
