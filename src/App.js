@@ -9,8 +9,7 @@ function App() {
   const dispatch = useDispatch();
   const inputRef = useRef();
   const onAdd = useCallback(() => {
-    const todo = inputRef.current.value;
-    dispatch(addTodo(todo));
+    dispatch(addTodo(inputRef.current.value));
   }, [inputRef, dispatch]);
 
   return (
