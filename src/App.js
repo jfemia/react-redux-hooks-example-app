@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo, updateTodo, deleteTodo } from './store/todo';
 import './App.css';
@@ -8,15 +8,12 @@ function App() {
 
   const dispatch = useDispatch();
   const inputRef = useRef();
-  const onAdd = useCallback(() => {
-    dispatch(addTodo(inputRef.current.value));
-  }, [inputRef, dispatch]);
 
   return (
     <div className="App">
       <header className="App-header">
         <input type="text" ref={inputRef} />
-        <button onClick={onAdd}>Add</button>
+        <button onClick={() => dispatch(addTodo(inputRef.current.value))}>Add</button>
         <ul>
           {todos.map(t => 
             <li key={t.id}>
