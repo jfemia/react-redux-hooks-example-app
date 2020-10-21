@@ -1,3 +1,10 @@
+# React / Redux example
+This app was created as the accompanying example source code for the [Redux with React Hooks](https://jfemia.github.io/blog/2020/10/16/redux-with-react-hooks) tutorial.
+
+
+___
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
